@@ -4,6 +4,13 @@ import streamlit as st
 import pickle
 import sys
 
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 dependentvarcat_dict = pickle.load(open("dependentvariable_catcodes.pkl", "rb"))
 final_collst = pickle.load(open("final_collst.pkl", "rb") )
